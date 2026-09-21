@@ -43,9 +43,7 @@ jobs:
             --ignore-unfixed \
             pushtoprod-app:${{ github.sha }}
 
-
-
-    publish:
+  publish:
     runs-on: ubuntu-latest
     needs: build-and-scan
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
